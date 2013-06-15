@@ -1,0 +1,11 @@
+$.getJSON( "http://rate-exchange.appspot.com/currency?callback=?", {
+				from: from,
+				to: to,
+				format: "json",
+				async: true
+				})
+				.done(function( data ) {
+					rate = parseFloat(data.rate);
+				});
+					return rate;
+				};
