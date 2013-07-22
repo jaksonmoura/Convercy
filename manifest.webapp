@@ -3,7 +3,7 @@
 	"name": "Convercy",
 	"description": "A simple currency converter",
 	"type": "privileged",
-	"version": "0.2",
+	"version": "0.2.1",
 	"developer":
 	{
 		"name": "Jakson Rochelly",
