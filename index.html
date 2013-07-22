@@ -7,11 +7,11 @@
 	<head>
 		<link rel="stylesheet" href="layout.css">
 		<script src='jquery.js'></script>
-		<title>Calculator Teste</title>
+		<title>Convercy</title>
 	</head>
 	<body>
 		<header>
-			<div id="logo">Money Converter</div>
+			<div id="logo"><img src="img/logo.png" alt="Convercy"></div>
 		</header>
 		<div id="selects">
 			<div id="from_select">
@@ -50,52 +50,7 @@
 			<input type="number" class="amount" name="amount" id="amount" value="1" autofocus/>
 	<div id="hidden-resizer" style="visibility: hidden"></div>
 		</div>
+		<p id="by">by <a href="http://twitter.com/jrochelly" target="_blank">@jrochelly</a></p>
+		<script src='index.js'></script>
 	</body>
-	<script>
-		var rate = null;
-		var from = null;
-		var to = null;
-
-		getRate = function() {	
-			$('#result').html("<small>getting data...</small>");
-			// Getting Values
-			from = $('#from').val();
-			to = $('#to').val();
-			url = "http://rate-exchange.appspot.com/currency?from=" + from + "&to=" + to + "&calback=jsonpCallback";
-			$.ajax({
-			url: url,
-			type: "POST",
-			async: false,
-			dataType: "jsonp",
-			success : function(data) 
-			{
-
-				rate = parseFloat(data.rate);
-				showConvertion(to);
-			}
-			});
-		};
-
-		showConvertion = function(to){
-			var amount = $('#amount').val();
-			result = amount * rate;
-			if (rate) {
-				$('#result').html("<div id='currency'><span>"+ to +"</span></div><div id='result_value'><p>" + result.toFixed(2)+ "</p></div>");
-			} else {
-				$('#result').html("<div id='currency'><span>"+ to +"</span></div>1.00<small><i> of course! :P</i></small>");
-			};
-		};
-
-		$(document).ready(function (){ getRate(); });
-		$('#from, #to').change(function (){	getRate(); });
-		$('#amount').keyup(function (){
-			showConvertion(to);
-			if ($('#result_value p').width() > $('#result_value').width()) {
-				while( $('#result_value p').width() > $('#result_value').width() ) {
-					$('#result_value p').css('font-size', (parseInt($('#result_value p').css('font-size'))) - 1 );
-				};
-			};
-			
-		});
-	</script>
 </html>

@@ -24,6 +24,13 @@ small{
 	width: 97%;
 	margin: 0 auto;
 }
+#logo{
+	float: left;
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	margin: 3px 0 0 0;
+}
 
 header{
 	float: left;
@@ -93,7 +100,7 @@ header{
 
 #result div{	
 	float: right;
-	width: 70%;
+	width: 100%;
 }
 
 #result div p{
@@ -102,16 +109,29 @@ header{
 	padding: 0;
 	line-height: 9rem;
 	text-align: center;
+	width: 100%;
 }
 
 #result #currency{
-	float: left;
-	width: 45px;
+	position: absolute;
+	top: 80px;
+	left: 2.5%;
 }
 
 #display #currency span{
 	float: left;
 	font-size: 1.5rem;
 	margin: 40px 0 0 0;
-	width: 90px;
 }
+
+#by {
+  position: fixed;
+  border: 0%;
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-size: 12px; }
+  #by a {
+    color: #666;
+    text-decoration: underline; }
