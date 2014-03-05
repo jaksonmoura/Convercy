@@ -3,7 +3,7 @@
 	"name": "Convercy",
 	"description": "A simple currency converter",
 	"type": "privileged",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"developer":
 	{
 		"name": "Jakson Rochelly",
@@ -13,7 +13,8 @@
 	{
 		"128": "/img/icon128.png",
 		"16": "/img/icon16.png",
-		"48": "/img/icon48.png"
+		"48": "/img/icon48.png",
+		"60": "/img/icon60.png"
 	},
 	"installs_allowed_from":
 	[
@@ -23,7 +24,7 @@
 	"locales":
 	{
 		"es":
-		{	
+		{
 			"name": "Convercy",
 			"description": "Un simple conversor de monedas"
 		},
